@@ -90,5 +90,8 @@ def update_map(cre_value, mod_value):
 
 # Rodar o app
 
-app.run(host="0.0.0.0", port=8050, debug=False)
+import os
+
+port = int(os.environ.get("PORT", 8050))
+app.run(host="0.0.0.0", port=port, debug=False)
 
